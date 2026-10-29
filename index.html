@@ -39,6 +39,19 @@ header{
   border:1px solid var(--border);background:transparent;color:var(--text);
   width:40px;height:40px;border-radius:12px;cursor:pointer;font-size:18px;
 }
+.actions{display:flex;align-items:center;gap:8px}
+.tool-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;height:40px;
+  padding:0 14px;border-radius:12px;background:var(--primary);color:#fff;
+  font-weight:700;font-size:.9rem;text-decoration:none;white-space:nowrap;
+  transition:filter .15s;
+}
+.tool-btn:hover,.tool-btn:focus-visible{filter:brightness(1.12);outline:none}
+.tool-btn .ico{font-size:18px;line-height:1}
+@media (max-width:520px){
+  .tool-btn{width:40px;padding:0}
+  .tool-btn .txt{display:none}
+}
 main{max-width:1100px;margin:0 auto;padding:24px 16px 40px}
 .intro h2{font-size:1.5rem}
 .intro p{color:var(--muted);margin:4px 0 20px}
@@ -69,7 +82,10 @@ footer{text-align:center;color:var(--muted);font-size:.8rem;padding:10px 16px 24
 <body>
 <header>
   <div class="brand"><div class="logo">🎓</div><span>بوابة المقررات</span></div>
-  <button class="theme" id="themeBtn" title="تبديل المظهر" aria-label="تبديل المظهر">🌓</button>
+  <div class="actions">
+    <a class="tool-btn" href="https://aliahamza.github.io/svu-lecture-Converter-mp4/" target="_blank" rel="noopener" title="محوّل المحاضرات إلى MP4" aria-label="محوّل المحاضرات إلى MP4"><span class="ico">🎬</span><span class="txt">محوّل المحاضرات</span></a>
+    <button class="theme" id="themeBtn" title="تبديل المظهر" aria-label="تبديل المظهر">🌓</button>
+  </div>
 </header>
 
 <main>
